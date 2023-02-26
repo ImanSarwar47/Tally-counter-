@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1 id="header">Counter</h1>
+    <h1 id="content">0</h1>
+    <br><br><br>
+    <div id="button-container">
+    <button id="increment" onclick="inc()">Increase</button>
+    <button id="Reset" onclick="re()">Reset</button>
+    <button id="Decrement" onclick="dec()">Decrease</button>
+    </div>
+
+
+<script>
+    var a=document.getElementById("content");
+    var total;
+
+    // for increment
+    function inc(){
+        total=a.innerHTML++;
+        if(a.innerHTML==1000){
+            a.innerHTML=0;
+        }
+    }
+
+    // for decrement
+    function dec() {
+        if(a.innerHTML==0){
+            total=a.innerHTML;
+        }
+        else if(a.innerHTML>0){
+            total=a.innerHTML--;
+        }
+    }
+
+
+    // for reset
+    function re(){
+        a.innerHTML=0;
+    }
+</script>
+</body>
+</html>
